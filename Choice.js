@@ -48,7 +48,7 @@ function list(filter) {
         if (filter) {
             var filterOption = {
                 where: {
-                    ChoiceID: filter 
+                    CategoryID: filter 
                 } 
             };
             return Choice.findAndCountAll(filterOption);
