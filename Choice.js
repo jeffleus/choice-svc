@@ -1,6 +1,6 @@
 'use strict';
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('FuelStation_EDA', 'callsheetadmin', 'Eraser$17', {
+var sequelize = new Sequelize('FuelStation_EDA', 'XXXX', 'XXXX', {
 	host: 'callsheet-mysql.cn6x6nhayn9c.us-west-2.rds.amazonaws.com',
 	port: 3306,
     pool: {
