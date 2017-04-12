@@ -27,7 +27,7 @@ var Choice = sequelize.define('choice', {
 	tableName: 'Choices'
 });
 
-var moduleName = "CATEGORY:";
+var moduleName = "CHOICE:";
 
 module.exports.get = function(id,filter) {
     if (!id) return list(filter);
