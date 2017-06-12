@@ -22,7 +22,11 @@ var Choice = sequelize.define('choice', {
   name: { type: Sequelize.STRING, field: 'Name' }, 
   description: { type: Sequelize.STRING, field: 'Description' },
   type: { type: Sequelize.INTEGER, field: 'Type' },
-  isActive: { type: Sequelize.BOOLEAN, field: 'IsActive' }
+  isActive: { type: Sequelize.BOOLEAN, field: 'IsActive' },
+  isPre: { type: Sequelize.BOOLEAN, field: 'isPre' },
+  isPost: { type: Sequelize.BOOLEAN, field: 'isPost' },
+  isHydration: { type: Sequelize.BOOLEAN, field: 'isHydration' },
+  isSnack: { type: Sequelize.BOOLEAN, field: 'isSnack' },
 }, {
 	tableName: 'Choices'
 });
