@@ -129,3 +129,25 @@ module.exports.delete = (event, context, callback) => {
       callback(err);
   });
 };
+
+module.exports.warm = (event, context, callback) => {
+  context.callbackWaitsForEmptyEventLoop = false;
+  var response = {
+    statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+        "Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS 
+      },
+      body: JSON.stringify({
+      message: 'DELETE from the choice microservice for FuelStationApp'
+    })
+  };
+	
+  Choice.warm().then(function(count) {
+      console.log('Choice.warm() as called...)');
+      callback(null, response);
+  }).catch(function(err) {
+      console.error(err);
+      callback(err);
+  });
+};

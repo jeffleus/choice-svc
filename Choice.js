@@ -108,6 +108,20 @@ module.exports.delete = function(id) {
 	});
 };
 
+module.exports.warm = function() {
+    var id = '1';
+    console.log(moduleName, 'keep warm calling getSingle with id: ' + id);
+    return sequelize.sync().then(function() {
+        return Choice.findById(id).then(function(choice) {
+            console.info(moduleName, 'choice record found');
+            return {
+                count: (choice)?1:0,
+                choices: [ (choice)?choice.dataValues:null ]
+            };
+        })
+    });
+}
+
 module.exports.close = function() {
 	sequelize.close();
 };

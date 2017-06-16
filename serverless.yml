@@ -106,7 +106,14 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-west-2:236711959566:userpool/us-west-2_KMI3gTfQw
-
+  warm:
+    handler: handler.warm
+    timeout: 3
+    events:
+      - schedule:
+          rate: rate(5 minutes)
+          enabled: true
+          
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
