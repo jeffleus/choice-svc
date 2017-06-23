@@ -77,6 +77,7 @@ module.exports.create = function(json) {
 		console.info(moduleName, 'create a new choice using JSON provided');
 		console.error('need to add json validation to choice creation');
 		var choiceJson = json;//JSON.parse(json);
+        choiceJson.CategoryID = 6;
 		return Choice.create(json).then(function(choice) {
 			console.info('choice successfully created');
 			return choice;
