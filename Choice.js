@@ -26,6 +26,7 @@ var Choice = sequelize.define('choice', {
   isPre: { type: Sequelize.BOOLEAN, field: 'isPre' },
   isPost: { type: Sequelize.BOOLEAN, field: 'isPost' },
   isHydration: { type: Sequelize.BOOLEAN, field: 'isHydration' },
+  isStaff: { type: Sequelize.BOOLEAN, field: 'isStaff' },
   isSnack: { type: Sequelize.BOOLEAN, field: 'isSnack' },
   isFree: { type: Sequelize.BOOLEAN, field: 'isFree' }
 }, {
