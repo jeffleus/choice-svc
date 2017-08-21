@@ -12,13 +12,13 @@ var choice = {
 	isActive: false
 };
 
-var id = 2;
+var id = 68;
 var filter = ('1,3,5,7').split(',');
 console.log("FILTER: ", filter);
 
-//Choice.get(null, filter).then(function(student) {
+Choice.get(id, filter).then(function(student) {
 //Choice.create(choice).then(function(student) {
-Choice.update(choice).then(function(student) {
+//Choice.update(choice).then(function(student) {
     
 //Sport.get(null, filter).then(function(student) {
 //Sport.get('XXX').then(function(student) {
