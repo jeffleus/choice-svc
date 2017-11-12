@@ -16,7 +16,8 @@ var choice = {
 //var filter = ('1,3,5,7').split(',');
 //console.log("FILTER: ", filter);
 
-Choice.get(null, null).then(function(result) {    
+//Choice.get(null, null).then(function(result) {    
+Choice.get(3374, null).then(function(result) {    
 	console.log(result);
 	return;
 }).catch(function(err) {

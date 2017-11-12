@@ -22,6 +22,7 @@ var Choice = sequelize.define('choice', {
   name: { type: Sequelize.STRING, field: 'Name' }, 
   description: { type: Sequelize.STRING, field: 'Description' },
   type: { type: Sequelize.INTEGER, field: 'Type' },
+  choiceValue: { type: Sequelize.INTEGER, field: 'choiceValue' },
   isActive: { type: Sequelize.BOOLEAN, field: 'IsActive' },
   isPre: { type: Sequelize.BOOLEAN, field: 'isPre' },
   isPost: { type: Sequelize.BOOLEAN, field: 'isPost' },
