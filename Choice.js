@@ -28,7 +28,8 @@ var Choice = sequelize.define('choice', {
   isHydration: { type: Sequelize.BOOLEAN, field: 'isHydration' },
   isStaff: { type: Sequelize.BOOLEAN, field: 'isStaff' },
   isSnack: { type: Sequelize.BOOLEAN, field: 'isSnack' },
-  isFree: { type: Sequelize.BOOLEAN, field: 'isFree' }
+  isFree: { type: Sequelize.BOOLEAN, field: 'isFree' },
+  isGlutenFree: { type: Sequelize.BOOLEAN, field: 'isGlutenFree' }
 }, {
 	tableName: 'Choices'
 });

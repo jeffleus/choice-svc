@@ -16,7 +16,8 @@ var id = 68;
 var filter = ('1,3,5,7').split(',');
 console.log("FILTER: ", filter);
 
-Choice.get(id, filter).then(function(student) {
+//Choice.get(id, filter).then(function(student) {
+Choice.get().then(function(result) {
 //Choice.create(choice).then(function(student) {
 //Choice.update(choice).then(function(student) {
     
@@ -31,7 +32,7 @@ Choice.get(id, filter).then(function(student) {
 //Athletes.create(ath).then(function(student) {
 //Athletes.get(id, filter).then(function(student) {
 //	console.log(result);
-	console.log(student);
+	console.log(result);
 	return;
 }).catch(function(err) {
 	console.error(err);
