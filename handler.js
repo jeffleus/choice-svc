@@ -56,8 +56,6 @@ module.exports.create = (event, context, callback) => {
     
     Choice.create(json).then(function(c) {
         choice = c;	//stash the choice in a function scoped variable
-        return c;
-    }).then(function(result) {
         response.body = JSON.stringify({
             message: 'Successfully created a new choice: ' + choice.ChoiceID,
             choice: choice
