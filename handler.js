@@ -1,9 +1,7 @@
 'use strict';
 var Choice = require('./Choice');
-var SMS = require('./SMS');
 const AWS = require('aws-sdk');
 AWS.config.region = 'us-west-2';
-var sns = new AWS.SNS();
 
 var moduleName = 'choice-svc';
 
@@ -58,9 +56,6 @@ module.exports.create = (event, context, callback) => {
     Choice.create(json).then(function(c) {
         console.log(moduleName, 'choice created, sending sms alert to confirm');
         choice = c;	//stash the choice in a function scoped variable
-        var msg = moduleName + ': successfully created a new choice - ' + choice.ChoiceID;
-        return SMS.sendText(msg, '+13108771151');
-    }).then(function(result) {
         response.body = JSON.stringify({
             message: 'Successfully created a new choice: ' + choice.ChoiceID,
             choice: choice
