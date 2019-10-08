@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: vcu-choice-svc
+service: tt-choice-svc
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -20,7 +20,7 @@ service: vcu-choice-svc
 provider:
   name: aws
   role: arn:aws:iam::236711959566:role/lambda_callsheet
-  runtime: nodejs6.10
+  runtime: nodejs8.10
 
 # you can overwrite defaults here
   stage: demo
